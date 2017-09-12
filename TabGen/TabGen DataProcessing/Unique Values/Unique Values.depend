@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1456770374 source:c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\unique values\main.cpp
+	<iostream>
+	<algorithm>
+	<fstream>
+	<vector>
+	<limits>
+	<sstream>
+	<string>
+	"windows.h"
+	"quicksort.h"
+	"bstr.h"
+
+1456770266 c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\unique values\bstr.h
+	<vector>
+
+1455997307 source:c:\users\p00rl3n0\desktop\tabgen\tabgen dataprocessing\unique values\main.cpp
+	<iostream>
+	"windows.h"
+	<fstream>
+	<vector>
+	<limits>
+	<sstream>
+	"quicksort.h"
+	"bstr.h"
+
+1455924070 c:\users\p00rl3n0\desktop\tabgen\tabgen dataprocessing\unique values\bstr.h
+	<vector>
+
+1456708506 c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\unique values\quicksort.h
+	<vector>
+
+1455924072 c:\users\p00rl3n0\desktop\tabgen\tabgen dataprocessing\unique values\quicksort.h
+	<vector>
+

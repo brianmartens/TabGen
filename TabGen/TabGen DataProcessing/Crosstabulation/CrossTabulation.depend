@@ -1,0 +1,163 @@
+# depslib dependency file v1.0
+1456938459 source:c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\ctable.cpp
+	"CTable.h"
+	<vector>
+
+1456938435 c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\ctable.h
+	<vector>
+	<fstream>
+
+1454690661 c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\bstr.h
+	<vector>
+
+1454723350 source:c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\main.cpp
+	<vector>
+	<sstream>
+	<fstream>
+	"windows.h"
+	"CTable.h"
+	"bstr.h"
+
+1454613444 source:c:\users\p00rl3n0\desktop\tabgen\tabgen dataprocessing\ctable.cpp
+	"CTable.h"
+
+1454613444 c:\users\p00rl3n0\desktop\tabgen\tabgen dataprocessing\ctable.h
+	<vector>
+	<string>
+	<sstream>
+
+1454643056 source:c:\users\p00rl3n0\desktop\tabgen\tabgen dataprocessing\main.cpp
+	<iostream>
+	<fstream>
+	"CTable.h"
+	"bstr.h"
+	"windows.h"
+
+1454613440 c:\users\p00rl3n0\desktop\tabgen\tabgen dataprocessing\bstr.h
+	<vector>
+
+1463500949 source:c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\crosstabulation\ctable.cpp
+	"CTable.h"
+	<utility>
+	<fstream>
+	<mutex>
+	"bmath.h"
+	"Algebra.h"
+
+1463596042 c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\crosstabulation\ctable.h
+	<string>
+	<mutex>
+	<vector>
+	<limits>
+
+1463501404 source:c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\crosstabulation\main.cpp
+	"windows.h"
+	"CTable.h"
+	"bstr.h"
+	<thread>
+	<iostream>
+	<fstream>
+
+1463495545 c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\crosstabulation\bstr.h
+	<vector>
+	"stdarg.h"
+	<mutex>
+	<thread>
+	<algorithm>
+
+1463498635 c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\crosstabulation\bmath.h
+	"math.h"
+	<vector>
+	<thread>
+	<clocale>
+	<cwctype>
+
+1466217980 source:c:\users\p00rl3n0\desktop\tabgen\tabgen dataprocessing\crosstabulation\ctable.cpp
+	"CTable.h"
+	<utility>
+	<fstream>
+	<mutex>
+	"bmath.h"
+	"Algebra.h"
+
+1466217980 c:\users\p00rl3n0\desktop\tabgen\tabgen dataprocessing\crosstabulation\ctable.h
+	<string>
+	<mutex>
+	<vector>
+	<limits>
+
+1466217980 c:\users\p00rl3n0\desktop\tabgen\tabgen dataprocessing\crosstabulation\bmath.h
+	"math.h"
+	<vector>
+	<thread>
+	<clocale>
+	<cwctype>
+
+1466217980 source:c:\users\p00rl3n0\desktop\tabgen\tabgen dataprocessing\crosstabulation\main.cpp
+	"windows.h"
+	"CTable.h"
+	"bstr.h"
+	<thread>
+	<iostream>
+	<fstream>
+
+1466217980 c:\users\p00rl3n0\desktop\tabgen\tabgen dataprocessing\crosstabulation\bstr.h
+	<vector>
+	"stdarg.h"
+	<mutex>
+	<thread>
+	<algorithm>
+
+1460753036 c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\crosstabulation\bignum.h
+	<iostream>
+	<sstream>
+	<string>
+	<fstream>
+	<math.h>
+	<vector>
+
+1463497364 c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\crosstabulation\algebra.h
+	"bmath.h"
+
+1466217980 c:\users\p00rl3n0\desktop\tabgen\tabgen dataprocessing\crosstabulation\algebra.h
+	"bmath.h"
+
+1465828343 source:c:\users\fdt user 3\desktop\tabgen\tabgen dataprocessing\crosstabulation\main.cpp
+	"windows.h"
+	"CTable.h"
+	"bstr.h"
+	<thread>
+	<iostream>
+	<fstream>
+
+1465821518 c:\users\fdt user 3\desktop\tabgen\tabgen dataprocessing\crosstabulation\ctable.h
+	<string>
+	<mutex>
+	<vector>
+	<limits>
+
+1465821518 c:\users\fdt user 3\desktop\tabgen\tabgen dataprocessing\crosstabulation\bstr.h
+	<vector>
+	"stdarg.h"
+	<mutex>
+	<thread>
+	<algorithm>
+
+1465827682 source:c:\users\fdt user 3\desktop\tabgen\tabgen dataprocessing\crosstabulation\ctable.cpp
+	"CTable.h"
+	<utility>
+	<fstream>
+	<mutex>
+	"bmath.h"
+	"Algebra.h"
+
+1465821518 c:\users\fdt user 3\desktop\tabgen\tabgen dataprocessing\crosstabulation\bmath.h
+	"math.h"
+	<vector>
+	<thread>
+	<clocale>
+	<cwctype>
+
+1465821518 c:\users\fdt user 3\desktop\tabgen\tabgen dataprocessing\crosstabulation\algebra.h
+	"bmath.h"
+

@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1458667261 source:c:\users\bmartens\desktop\c++ practice\main.cpp
+	<iostream>
+	<vector>
+
+1458667261 source:c:\users\bmartens\desktop\tabgen\codetesting\main.cpp
+	<iostream>
+	<vector>
+
+1463432524 source:c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\codetesting\main.cpp
+	"windows.h"
+	<thread>
+	<iostream>
+	<limits>
+	<sstream>
+
+1462310086 c:\users\bmartens\desktop\tabgen\tabgen dataprocessing\codetesting\algebra.h
+
+1462057737 source:c:\users\p00rl3n0\desktop\tabgen\tabgen dataprocessing\codetesting\main.cpp
+	<iostream>
+	<vector>
+	<mutex>
+	<thread>
+	<sstream>
+	"math.h"
+	"Algebra.h"
+	<fstream>
+
+1462055874 c:\users\p00rl3n0\desktop\tabgen\tabgen dataprocessing\codetesting\algebra.h
+
+1465498988 source:c:\users\fdt user 3\desktop\tabgen\tabgen dataprocessing\codetesting\main.cpp
+	"windows.h"
+	<thread>
+	<iostream>
+	<limits>
+	<vector>
+

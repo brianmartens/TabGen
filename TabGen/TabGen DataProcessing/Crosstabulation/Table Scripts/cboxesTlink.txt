@@ -1,0 +1,225 @@
+Sub combobox1_change()
+Dim reportfile As TextStream, metafile As TextStream, fso As New FileSystemObject, _
+    linestr As String, ecount As Long, c1 As Long, c2 As Long, c3 As Long, ranges() As String, gdata() As Variant, _
+    base As Variant, CTdata() As Variant, RTdata() As Variant, desc() As Variant, ssplit() As String, _
+    descrng() As String, RTrng As String, CTrng As String, totaled As Boolean
+On Error GoTo nulldata
+        If fso.FileExists(ActiveWorkbook.Path & "\TabGen DataProcessing\Crosstabulation\Table Reports\" & ActiveSheet.name & ".txt") Then
+            Set reportfile = fso.OpenTextFile(ActiveWorkbook.Path & "\TabGen DataProcessing\Crosstabulation\Table Reports\" & ActiveSheet.name & ".txt")
+        Else
+            MsgBox "This table's data has been removed\changed from '\TabGen\TabGen DataProcessing\Crosstabulation\Table Reports\'", vbExclamation, "Missing Data File"
+            Exit Sub
+        End If
+        If fso.FileExists(ActiveWorkbook.Path & "\TabGen DataProcessing\Crosstabulation\Table Metadata\" & ActiveSheet.name & ".txt") Then
+            Set metafile = fso.OpenTextFile(ActiveWorkbook.Path & "\TabGen DataProcessing\Crosstabulation\Table Metadata\" & ActiveSheet.name & ".txt")
+        Else
+            MsgBox "This table's Metadata has been removed\changed from '\TabGen\TabGen DataProcessing\Crosstabulation\Table Metadata\'", vbExclamation, "Missing Metadata File"
+            Exit Sub
+        End If
+        Do While Not metafile.AtEndOfStream
+            linestr = metafile.ReadLine
+            If InStr(1, linestr, "Row Group:") > 0 Then
+                If InStr(1, linestr, "Row Group: Descriptives") > 0 Then
+                    ecount = Mid(linestr, InStr(1, linestr, "Total Elements: ") + Len("Total Elements: "))
+                    ReDim descrng(1 To ecount)
+                    For c1 = 1 To ecount
+                        linestr = metafile.ReadLine
+                        descrng(c1) = Mid(linestr, InStr(1, linestr, ":") + 2)
+                    Next c1
+                ElseIf InStr(1, linestr, "Row Group: Tab Totals") > 0 Then
+                    linestr = metafile.ReadLine
+                    CTrng = Mid(linestr, InStr(1, linestr, ":") + 2)
+                Else
+                    ecount = Mid(linestr, InStr(1, linestr, "Total Elements: ") + Len("Total Elements: "))
+                    For c3 = 1 To ecount
+                        c2 = c2 + 1
+                        ReDim Preserve ranges(1 To c2)
+                        linestr = metafile.ReadLine
+                        ranges(c2) = Mid(linestr, InStr(1, linestr, ":") + 2)
+                    Next c3
+                End If
+            ElseIf InStr(1, linestr, "Row Totals:") > 0 Then
+                RTrng = Mid(linestr, InStr(1, linestr, ":") + 2)
+            End If
+        Loop
+        ecount = 0
+        totaled = False
+        Application.ScreenUpdating = False
+        Do While Not reportfile.AtEndOfStream
+            linestr = reportfile.ReadLine
+            If InStr(1, linestr, "Row Group:") > 0 Then
+                ecount = ecount + 1
+                linestr = reportfile.ReadLine
+                If Not totaled Then
+                    If ComboBox1.value = "wCounts" Or ComboBox1.value = "wPercents" Then
+                        linestr = reportfile.ReadLine
+                        base = Val(splice(linestr, "{", "}"))
+                    Else
+                        base = Val(splice(linestr, "{", "}"))
+                        linestr = reportfile.ReadLine
+                    End If
+                    If ComboBox1.value = "Percents" Or ComboBox1.value = "wPercents" Then
+                        Do While Not InStr(1, linestr, "Percents: {") > 0
+                            linestr = reportfile.ReadLine
+                        Loop
+                        linestr = reportfile.ReadLine
+                    End If
+                End If
+                If InStr(1, ComboBox1.value, "w") > 0 Then reportfile.SkipLine
+                linestr = reportfile.ReadLine
+                If Not totaled Then
+                    ssplit = Split(splice(linestr, "{", "}"), ",")
+                    ReDim CTdata(0 To UBound(ssplit))
+                    For c1 = 0 To UBound(ssplit)
+                        CTdata(c1) = Val(ssplit(c1))
+                    Next c1
+                    totaled = True
+                    reportfile.SkipLine
+                    linestr = reportfile.ReadLine
+                End If
+                If InStr(1, ComboBox1.value, "w") > 0 Then
+                    Do While Not (InStr(1, linestr, vbTab & vbTab & vbTab & "w") > 0 And InStr(1, linestr, "RowTotals") > 0)
+                        linestr = reportfile.ReadLine
+                    Loop
+                Else
+                    Do While Not (InStr(1, linestr, vbTab & vbTab & vbTab & "u") > 0 And InStr(1, linestr, "RowTotals") > 0)
+                        linestr = reportfile.ReadLine
+                    Loop
+                End If
+                ssplit = Split(splice(linestr, "{", "}"), ",")
+                ReDim Preserve RTdata(1 To ecount)
+                For c1 = 0 To UBound(ssplit)
+                    RTdata(ecount) = Val(ssplit(c1))
+                Next c1
+                If ComboBox1.value = "Counts" Then
+                    Do Until InStr(1, linestr, "uCounts: {") > 0 Or reportfile.AtEndOfStream
+                        linestr = reportfile.ReadLine
+                    Loop
+                    Do Until reportfile.AtEndOfStream
+                        linestr = reportfile.ReadLine
+                        If linestr = vbTab & vbTab & vbTab & "}" Then Exit Do
+                        ssplit = Split(splice(linestr, "{", "}"), ",")
+                        ReDim gdata(0 To UBound(ssplit))
+                        For c2 = 0 To UBound(ssplit)
+                            gdata(c2) = Val(ssplit(c2))
+                        Next c2
+                        Range(ranges(ecount)).value = gdata
+                        If ComboBox1.value = "Percents" Or ComboBox1.value = "wPercents" Then
+                            Range(ranges(ecount)).NumberFormat = "0.00%"
+                        ElseIf ComboBox1.value = "wCounts" Then
+                            Range(ranges(ecount)).NumberFormat = "0.00"
+                        Else
+                            Range(ranges(ecount)).NumberFormat = "0"
+                        End If
+                    Loop
+                ElseIf ComboBox1.value = "Percents" Then
+                    Do Until InStr(1, linestr, "upercs: {") > 0 Or reportfile.AtEndOfStream
+                        linestr = reportfile.ReadLine
+                    Loop
+                    Do Until reportfile.AtEndOfStream
+                        linestr = reportfile.ReadLine
+                        If linestr = vbTab & vbTab & vbTab & "}" Then Exit Do
+                        ssplit = Split(splice(linestr, "{", "}"), ",")
+                        ReDim gdata(0 To UBound(ssplit))
+                        For c2 = 0 To UBound(ssplit)
+                            gdata(c2) = Val(ssplit(c2))
+                        Next c2
+                        Range(ranges(ecount)).value = gdata
+                        If ComboBox1.value = "Percents" Or ComboBox1.value = "wPercents" Then
+                            Range(ranges(ecount)).NumberFormat = "0.00%"
+                        ElseIf ComboBox1.value = "wCounts" Then
+                            Range(ranges(ecount)).NumberFormat = "0.00"
+                        Else
+                            Range(ranges(ecount)).NumberFormat = "0"
+                        End If
+                    Loop
+                ElseIf ComboBox1.value = "wCounts" Then
+                    Do Until InStr(1, linestr, "wCounts: {") > 0 Or reportfile.AtEndOfStream
+                        linestr = reportfile.ReadLine
+                    Loop
+                    Do Until reportfile.AtEndOfStream
+                        linestr = reportfile.ReadLine
+                        If linestr = vbTab & vbTab & vbTab & "}" Then Exit Do
+                        ssplit = Split(splice(linestr, "{", "}"), ",")
+                        ReDim gdata(0 To UBound(ssplit))
+                        For c2 = 0 To UBound(ssplit)
+                            gdata(c2) = Val(ssplit(c2))
+                        Next c2
+                        Range(ranges(ecount)).value = gdata
+                        If ComboBox1.value = "Percents" Or ComboBox1.value = "wPercents" Then
+                            Range(ranges(ecount)).NumberFormat = "0.00%"
+                        ElseIf ComboBox1.value = "wCounts" Then
+                            Range(ranges(ecount)).NumberFormat = "0.00"
+                        Else
+                            Range(ranges(ecount)).NumberFormat = "0"
+                        End If
+                    Loop
+                ElseIf ComboBox1.value = "wPercents" Then
+                    Do Until InStr(1, linestr, "wpercs: {") > 0 Or reportfile.AtEndOfStream
+                        linestr = reportfile.ReadLine
+                    Loop
+                    Do Until reportfile.AtEndOfStream
+                        linestr = reportfile.ReadLine
+                        If linestr = vbTab & vbTab & vbTab & "}" Then Exit Do
+                        ssplit = Split(splice(linestr, "{", "}"), ",")
+                        ReDim gdata(0 To UBound(ssplit))
+                        For c2 = 0 To UBound(ssplit)
+                            gdata(c2) = Val(ssplit(c2))
+                        Next c2
+                        Range(ranges(ecount)).value = gdata
+                        If ComboBox1.value = "Percents" Or ComboBox1.value = "wPercents" Then
+                            Range(ranges(ecount)).NumberFormat = "0.00%"
+                        ElseIf ComboBox1.value = "wCounts" Then
+                            Range(ranges(ecount)).NumberFormat = "0.00"
+                        Else
+                            Range(ranges(ecount)).NumberFormat = "0"
+                        End If
+                    Loop
+                End If
+            End If
+        Loop
+        If RTrng <> "" Then
+            Range(RTrng).value = Application.Transpose(RTdata)
+            Range("E10").value = base
+            If ComboBox1.value = "Percents" Then
+                Range(RTrng).NumberFormat = "0.00%"
+                Range("E10").NumberFormat = "0"
+            ElseIf ComboBox1.value = "wPercents" Then
+                Range(RTrng).NumberFormat = "0.00%"
+                Range("E10").NumberFormat = "0.00"
+            ElseIf ComboBox1.value = "wCounts" Then
+                Range(RTrng).NumberFormat = "0.00"
+                Range("E10").NumberFormat = "0.00"
+            Else
+                Range(RTrng).NumberFormat = "0"
+                Range("E10").NumberFormat = "0"
+            End If
+        End If
+        If CTrng <> "" Then
+            Range(CTrng).value = CTdata
+            Range("E10").value = base
+            If ComboBox1.value = "Percents" Then
+                Range(CTrng).NumberFormat = "0.00%"
+                Range("E10").NumberFormat = "0"
+            ElseIf ComboBox1.value = "wPercents" Then
+                Range(CTrng).NumberFormat = "0.00%"
+                Range("E10").NumberFormat = "0.00"
+            ElseIf ComboBox1.value = "wCounts" Then
+                Range(CTrng).NumberFormat = "0.00"
+                Range("E10").NumberFormat = "0.00"
+            Else
+                Range(CTrng).NumberFormat = "0"
+                Range("E10").NumberFormat = "0"
+            End If
+        End If
+        On Error GoTo nodesc
+        If UBound(descrng) > 0 Then
+            
+        End If
+extloop:
+    Application.ScreenUpdating = True
+    Exit Sub
+nodesc:
+    Resume extloop
+nulldata:
+End Sub

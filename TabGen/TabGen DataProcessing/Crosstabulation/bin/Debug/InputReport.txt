@@ -1,0 +1,696 @@
+Application FilePath = C:\Users\P00RL3N0\Desktop\TabGen
+Run Name: asd created at: 6/26/2016 9:02:47 PM
+Run Type: Crosstabulation
+Consolidate Tables = False
+Weight = True
+datapath = C:\Users\P00RL3N0\Desktop\TabGen\data.csv
+Weight Name = weight
+Total Tables: 11
+
+-----------------------------------------------
+
+Table: q1_0
+
+Row Totals = True
+Tab Totals = True
+Means = True
+Variance = False
+Standard Deviation = False
+Part-to-part Z-test for proportions = True
+Part-to-part T-test for means = True
+Part-to-whole Z-test for proportions = True
+Part-to-whole T-test for means = True
+ANOVA = False
+G-Test = False
+Linked Groups = False
+Confidence Levels: (0.9),(0.95),(0.99)
+TotalTabCount = 11
+TotalRowCount = 14
+TabGroupCount = 4
+RowGroupCount = 3
+
+TabsBegin: 
+
+GroupName: Row Totals E-tags: (T)
+GroupName: Income E-tags: (A,B,C)
+GroupName: Tenure E-tags: (A,B,C,D)
+GroupName: Co Size E-tags: (A,B,C)
+Element Name: (-) Calculated: True Conditions:  Parent: Row Totals E-tag: T Parent Group Number: 1
+Element Name: Low Calculated: False Conditions: income<=2 Parent: Income E-tag: A Parent Group Number: 2
+Element Name: Middle Calculated: False Conditions: income==3,income==4 Parent: Income E-tag: B Parent Group Number: 2
+Element Name: High Calculated: False Conditions: income>4 Parent: Income E-tag: C Parent Group Number: 2
+Element Name: 1-4 yrs Calculated: False Conditions: tenure==1 Parent: Tenure E-tag: A Parent Group Number: 3
+Element Name: 5-9 yrs Calculated: False Conditions: tenure==2 Parent: Tenure E-tag: B Parent Group Number: 3
+Element Name: 10-19 yrs Calculated: False Conditions: tenure==3 Parent: Tenure E-tag: C Parent Group Number: 3
+Element Name: 20+ yrs Calculated: False Conditions: tenure==4 Parent: Tenure E-tag: D Parent Group Number: 3
+Element Name: Small Calculated: False Conditions: cosize<=2 Parent: Co Size E-tag: A Parent Group Number: 4
+Element Name: Medium Calculated: False Conditions: cosize==3,cosize==4 Parent: Co Size E-tag: B Parent Group Number: 4
+Element Name: Large Calculated: False Conditions: cosize>4 Parent: Co Size E-tag: C Parent Group Number: 4
+TabsEnd
+
+RowsBegin: 
+
+GroupName: Tab Totals Profile: NULL Control Variable: 
+GroupName: q1_0 Profile: (0:0),(1:1),(2:2),(3:3),(4:4),(5:5),(6:6),(7:7),(8:8),(9:9),(10:10) Control Variable: q1_0
+GroupName: Descriptives Profile: NULL Control Variable: 
+Element Name: (-) Calculated: True Conditions:  Parent: Tab Totals Parent Row Number: 1
+Element Name: Top 4 Calculated: True Conditions: 7+8+9+10 Parent: q1_0 Parent Row Number: 2
+Element Name: 10 Calculated: False Conditions: q1_0==10 Parent: q1_0 Parent Row Number: 2
+Element Name: 9 Calculated: False Conditions: q1_0==9 Parent: q1_0 Parent Row Number: 2
+Element Name: 8 Calculated: False Conditions: q1_0==8 Parent: q1_0 Parent Row Number: 2
+Element Name: 7 Calculated: False Conditions: q1_0==7 Parent: q1_0 Parent Row Number: 2
+Element Name: 6 Calculated: False Conditions: q1_0==6 Parent: q1_0 Parent Row Number: 2
+Element Name: 5 Calculated: False Conditions: q1_0==5 Parent: q1_0 Parent Row Number: 2
+Element Name: 4 Calculated: False Conditions: q1_0==4 Parent: q1_0 Parent Row Number: 2
+Element Name: 3 Calculated: False Conditions: q1_0==3 Parent: q1_0 Parent Row Number: 2
+Element Name: 2 Calculated: False Conditions: q1_0==2 Parent: q1_0 Parent Row Number: 2
+Element Name: 1 Calculated: False Conditions: q1_0==1 Parent: q1_0 Parent Row Number: 2
+Element Name: 0 Calculated: False Conditions: q1_0==0 Parent: q1_0 Parent Row Number: 2
+Element Name: Mean Calculated: True Conditions:  Parent: Descriptives Parent Row Number: 3
+RowsEnd
+
+End Table
+
+Table: q1_1
+
+Row Totals = True
+Tab Totals = True
+Means = True
+Variance = False
+Standard Deviation = False
+Part-to-part Z-test for proportions = True
+Part-to-part T-test for means = True
+Part-to-whole Z-test for proportions = True
+Part-to-whole T-test for means = True
+ANOVA = False
+G-Test = False
+Linked Groups = False
+Confidence Levels: (0.9),(0.95),(0.99)
+TotalTabCount = 11
+TotalRowCount = 14
+TabGroupCount = 4
+RowGroupCount = 3
+
+TabsBegin: 
+
+GroupName: Row Totals E-tags: (T)
+GroupName: Income E-tags: (A,B,C)
+GroupName: Tenure E-tags: (A,B,C,D)
+GroupName: Co Size E-tags: (A,B,C)
+Element Name: (-) Calculated: True Conditions:  Parent: Row Totals E-tag: T Parent Group Number: 1
+Element Name: Low Calculated: False Conditions: income<=2 Parent: Income E-tag: A Parent Group Number: 2
+Element Name: Middle Calculated: False Conditions: income==3,income==4 Parent: Income E-tag: B Parent Group Number: 2
+Element Name: High Calculated: False Conditions: income>4 Parent: Income E-tag: C Parent Group Number: 2
+Element Name: 1-4 yrs Calculated: False Conditions: tenure==1 Parent: Tenure E-tag: A Parent Group Number: 3
+Element Name: 5-9 yrs Calculated: False Conditions: tenure==2 Parent: Tenure E-tag: B Parent Group Number: 3
+Element Name: 10-19 yrs Calculated: False Conditions: tenure==3 Parent: Tenure E-tag: C Parent Group Number: 3
+Element Name: 20+ yrs Calculated: False Conditions: tenure==4 Parent: Tenure E-tag: D Parent Group Number: 3
+Element Name: Small Calculated: False Conditions: cosize<=2 Parent: Co Size E-tag: A Parent Group Number: 4
+Element Name: Medium Calculated: False Conditions: cosize==3,cosize==4 Parent: Co Size E-tag: B Parent Group Number: 4
+Element Name: Large Calculated: False Conditions: cosize>4 Parent: Co Size E-tag: C Parent Group Number: 4
+TabsEnd
+
+RowsBegin: 
+
+GroupName: Tab Totals Profile: NULL Control Variable: 
+GroupName: q1_1 Profile: (0:0),(1:1),(2:2),(3:3),(4:4),(5:5),(6:6),(7:7),(8:8),(9:9),(10:10) Control Variable: q1_1
+GroupName: Descriptives Profile: NULL Control Variable: 
+Element Name: (-) Calculated: True Conditions:  Parent: Tab Totals Parent Row Number: 1
+Element Name: Top 4 Calculated: True Conditions: 7+8+9+10 Parent: q1_1 Parent Row Number: 2
+Element Name: 10 Calculated: False Conditions: q1_1==10 Parent: q1_1 Parent Row Number: 2
+Element Name: 9 Calculated: False Conditions: q1_1==9 Parent: q1_1 Parent Row Number: 2
+Element Name: 8 Calculated: False Conditions: q1_1==8 Parent: q1_1 Parent Row Number: 2
+Element Name: 7 Calculated: False Conditions: q1_1==7 Parent: q1_1 Parent Row Number: 2
+Element Name: 6 Calculated: False Conditions: q1_1==6 Parent: q1_1 Parent Row Number: 2
+Element Name: 5 Calculated: False Conditions: q1_1==5 Parent: q1_1 Parent Row Number: 2
+Element Name: 4 Calculated: False Conditions: q1_1==4 Parent: q1_1 Parent Row Number: 2
+Element Name: 3 Calculated: False Conditions: q1_1==3 Parent: q1_1 Parent Row Number: 2
+Element Name: 2 Calculated: False Conditions: q1_1==2 Parent: q1_1 Parent Row Number: 2
+Element Name: 1 Calculated: False Conditions: q1_1==1 Parent: q1_1 Parent Row Number: 2
+Element Name: 0 Calculated: False Conditions: q1_1==0 Parent: q1_1 Parent Row Number: 2
+Element Name: Mean Calculated: True Conditions:  Parent: Descriptives Parent Row Number: 3
+RowsEnd
+
+End Table
+
+Table: q1_2
+
+Row Totals = True
+Tab Totals = True
+Means = True
+Variance = False
+Standard Deviation = False
+Part-to-part Z-test for proportions = True
+Part-to-part T-test for means = True
+Part-to-whole Z-test for proportions = True
+Part-to-whole T-test for means = True
+ANOVA = False
+G-Test = False
+Linked Groups = False
+Confidence Levels: (0.9),(0.95),(0.99)
+TotalTabCount = 11
+TotalRowCount = 14
+TabGroupCount = 4
+RowGroupCount = 3
+
+TabsBegin: 
+
+GroupName: Row Totals E-tags: (T)
+GroupName: Income E-tags: (A,B,C)
+GroupName: Tenure E-tags: (A,B,C,D)
+GroupName: Co Size E-tags: (A,B,C)
+Element Name: (-) Calculated: True Conditions:  Parent: Row Totals E-tag: T Parent Group Number: 1
+Element Name: Low Calculated: False Conditions: income<=2 Parent: Income E-tag: A Parent Group Number: 2
+Element Name: Middle Calculated: False Conditions: income==3,income==4 Parent: Income E-tag: B Parent Group Number: 2
+Element Name: High Calculated: False Conditions: income>4 Parent: Income E-tag: C Parent Group Number: 2
+Element Name: 1-4 yrs Calculated: False Conditions: tenure==1 Parent: Tenure E-tag: A Parent Group Number: 3
+Element Name: 5-9 yrs Calculated: False Conditions: tenure==2 Parent: Tenure E-tag: B Parent Group Number: 3
+Element Name: 10-19 yrs Calculated: False Conditions: tenure==3 Parent: Tenure E-tag: C Parent Group Number: 3
+Element Name: 20+ yrs Calculated: False Conditions: tenure==4 Parent: Tenure E-tag: D Parent Group Number: 3
+Element Name: Small Calculated: False Conditions: cosize<=2 Parent: Co Size E-tag: A Parent Group Number: 4
+Element Name: Medium Calculated: False Conditions: cosize==3,cosize==4 Parent: Co Size E-tag: B Parent Group Number: 4
+Element Name: Large Calculated: False Conditions: cosize>4 Parent: Co Size E-tag: C Parent Group Number: 4
+TabsEnd
+
+RowsBegin: 
+
+GroupName: Tab Totals Profile: NULL Control Variable: 
+GroupName: q1_2 Profile: (0:0),(1:1),(2:2),(3:3),(4:4),(5:5),(6:6),(7:7),(8:8),(9:9),(10:10) Control Variable: q1_2
+GroupName: Descriptives Profile: NULL Control Variable: 
+Element Name: (-) Calculated: True Conditions:  Parent: Tab Totals Parent Row Number: 1
+Element Name: Top 4 Calculated: True Conditions: 7+8+9+10 Parent: q1_2 Parent Row Number: 2
+Element Name: 10 Calculated: False Conditions: q1_2==10 Parent: q1_2 Parent Row Number: 2
+Element Name: 9 Calculated: False Conditions: q1_2==9 Parent: q1_2 Parent Row Number: 2
+Element Name: 8 Calculated: False Conditions: q1_2==8 Parent: q1_2 Parent Row Number: 2
+Element Name: 7 Calculated: False Conditions: q1_2==7 Parent: q1_2 Parent Row Number: 2
+Element Name: 6 Calculated: False Conditions: q1_2==6 Parent: q1_2 Parent Row Number: 2
+Element Name: 5 Calculated: False Conditions: q1_2==5 Parent: q1_2 Parent Row Number: 2
+Element Name: 4 Calculated: False Conditions: q1_2==4 Parent: q1_2 Parent Row Number: 2
+Element Name: 3 Calculated: False Conditions: q1_2==3 Parent: q1_2 Parent Row Number: 2
+Element Name: 2 Calculated: False Conditions: q1_2==2 Parent: q1_2 Parent Row Number: 2
+Element Name: 1 Calculated: False Conditions: q1_2==1 Parent: q1_2 Parent Row Number: 2
+Element Name: 0 Calculated: False Conditions: q1_2==0 Parent: q1_2 Parent Row Number: 2
+Element Name: Mean Calculated: True Conditions:  Parent: Descriptives Parent Row Number: 3
+RowsEnd
+
+End Table
+
+Table: q1_3
+
+Row Totals = True
+Tab Totals = True
+Means = True
+Variance = False
+Standard Deviation = False
+Part-to-part Z-test for proportions = True
+Part-to-part T-test for means = True
+Part-to-whole Z-test for proportions = True
+Part-to-whole T-test for means = True
+ANOVA = False
+G-Test = False
+Linked Groups = False
+Confidence Levels: (0.9),(0.95),(0.99)
+TotalTabCount = 11
+TotalRowCount = 14
+TabGroupCount = 4
+RowGroupCount = 3
+
+TabsBegin: 
+
+GroupName: Row Totals E-tags: (T)
+GroupName: Income E-tags: (A,B,C)
+GroupName: Tenure E-tags: (A,B,C,D)
+GroupName: Co Size E-tags: (A,B,C)
+Element Name: (-) Calculated: True Conditions:  Parent: Row Totals E-tag: T Parent Group Number: 1
+Element Name: Low Calculated: False Conditions: income<=2 Parent: Income E-tag: A Parent Group Number: 2
+Element Name: Middle Calculated: False Conditions: income==3,income==4 Parent: Income E-tag: B Parent Group Number: 2
+Element Name: High Calculated: False Conditions: income>4 Parent: Income E-tag: C Parent Group Number: 2
+Element Name: 1-4 yrs Calculated: False Conditions: tenure==1 Parent: Tenure E-tag: A Parent Group Number: 3
+Element Name: 5-9 yrs Calculated: False Conditions: tenure==2 Parent: Tenure E-tag: B Parent Group Number: 3
+Element Name: 10-19 yrs Calculated: False Conditions: tenure==3 Parent: Tenure E-tag: C Parent Group Number: 3
+Element Name: 20+ yrs Calculated: False Conditions: tenure==4 Parent: Tenure E-tag: D Parent Group Number: 3
+Element Name: Small Calculated: False Conditions: cosize<=2 Parent: Co Size E-tag: A Parent Group Number: 4
+Element Name: Medium Calculated: False Conditions: cosize==3,cosize==4 Parent: Co Size E-tag: B Parent Group Number: 4
+Element Name: Large Calculated: False Conditions: cosize>4 Parent: Co Size E-tag: C Parent Group Number: 4
+TabsEnd
+
+RowsBegin: 
+
+GroupName: Tab Totals Profile: NULL Control Variable: 
+GroupName: q1_3 Profile: (0:0),(1:1),(2:2),(3:3),(4:4),(5:5),(6:6),(7:7),(8:8),(9:9),(10:10) Control Variable: q1_3
+GroupName: Descriptives Profile: NULL Control Variable: 
+Element Name: (-) Calculated: True Conditions:  Parent: Tab Totals Parent Row Number: 1
+Element Name: Top 4 Calculated: True Conditions: 7+8+9+10 Parent: q1_3 Parent Row Number: 2
+Element Name: 10 Calculated: False Conditions: q1_3==10 Parent: q1_3 Parent Row Number: 2
+Element Name: 9 Calculated: False Conditions: q1_3==9 Parent: q1_3 Parent Row Number: 2
+Element Name: 8 Calculated: False Conditions: q1_3==8 Parent: q1_3 Parent Row Number: 2
+Element Name: 7 Calculated: False Conditions: q1_3==7 Parent: q1_3 Parent Row Number: 2
+Element Name: 6 Calculated: False Conditions: q1_3==6 Parent: q1_3 Parent Row Number: 2
+Element Name: 5 Calculated: False Conditions: q1_3==5 Parent: q1_3 Parent Row Number: 2
+Element Name: 4 Calculated: False Conditions: q1_3==4 Parent: q1_3 Parent Row Number: 2
+Element Name: 3 Calculated: False Conditions: q1_3==3 Parent: q1_3 Parent Row Number: 2
+Element Name: 2 Calculated: False Conditions: q1_3==2 Parent: q1_3 Parent Row Number: 2
+Element Name: 1 Calculated: False Conditions: q1_3==1 Parent: q1_3 Parent Row Number: 2
+Element Name: 0 Calculated: False Conditions: q1_3==0 Parent: q1_3 Parent Row Number: 2
+Element Name: Mean Calculated: True Conditions:  Parent: Descriptives Parent Row Number: 3
+RowsEnd
+
+End Table
+
+Table: q1_4
+
+Row Totals = True
+Tab Totals = True
+Means = True
+Variance = False
+Standard Deviation = False
+Part-to-part Z-test for proportions = True
+Part-to-part T-test for means = True
+Part-to-whole Z-test for proportions = True
+Part-to-whole T-test for means = True
+ANOVA = False
+G-Test = False
+Linked Groups = False
+Confidence Levels: (0.9),(0.95),(0.99)
+TotalTabCount = 11
+TotalRowCount = 14
+TabGroupCount = 4
+RowGroupCount = 3
+
+TabsBegin: 
+
+GroupName: Row Totals E-tags: (T)
+GroupName: Income E-tags: (A,B,C)
+GroupName: Tenure E-tags: (A,B,C,D)
+GroupName: Co Size E-tags: (A,B,C)
+Element Name: (-) Calculated: True Conditions:  Parent: Row Totals E-tag: T Parent Group Number: 1
+Element Name: Low Calculated: False Conditions: income<=2 Parent: Income E-tag: A Parent Group Number: 2
+Element Name: Middle Calculated: False Conditions: income==3,income==4 Parent: Income E-tag: B Parent Group Number: 2
+Element Name: High Calculated: False Conditions: income>4 Parent: Income E-tag: C Parent Group Number: 2
+Element Name: 1-4 yrs Calculated: False Conditions: tenure==1 Parent: Tenure E-tag: A Parent Group Number: 3
+Element Name: 5-9 yrs Calculated: False Conditions: tenure==2 Parent: Tenure E-tag: B Parent Group Number: 3
+Element Name: 10-19 yrs Calculated: False Conditions: tenure==3 Parent: Tenure E-tag: C Parent Group Number: 3
+Element Name: 20+ yrs Calculated: False Conditions: tenure==4 Parent: Tenure E-tag: D Parent Group Number: 3
+Element Name: Small Calculated: False Conditions: cosize<=2 Parent: Co Size E-tag: A Parent Group Number: 4
+Element Name: Medium Calculated: False Conditions: cosize==3,cosize==4 Parent: Co Size E-tag: B Parent Group Number: 4
+Element Name: Large Calculated: False Conditions: cosize>4 Parent: Co Size E-tag: C Parent Group Number: 4
+TabsEnd
+
+RowsBegin: 
+
+GroupName: Tab Totals Profile: NULL Control Variable: 
+GroupName: q1_4 Profile: (0:0),(1:1),(2:2),(3:3),(4:4),(5:5),(6:6),(7:7),(8:8),(9:9),(10:10) Control Variable: q1_4
+GroupName: Descriptives Profile: NULL Control Variable: 
+Element Name: (-) Calculated: True Conditions:  Parent: Tab Totals Parent Row Number: 1
+Element Name: Top 4 Calculated: True Conditions: 7+8+9+10 Parent: q1_4 Parent Row Number: 2
+Element Name: 10 Calculated: False Conditions: q1_4==10 Parent: q1_4 Parent Row Number: 2
+Element Name: 9 Calculated: False Conditions: q1_4==9 Parent: q1_4 Parent Row Number: 2
+Element Name: 8 Calculated: False Conditions: q1_4==8 Parent: q1_4 Parent Row Number: 2
+Element Name: 7 Calculated: False Conditions: q1_4==7 Parent: q1_4 Parent Row Number: 2
+Element Name: 6 Calculated: False Conditions: q1_4==6 Parent: q1_4 Parent Row Number: 2
+Element Name: 5 Calculated: False Conditions: q1_4==5 Parent: q1_4 Parent Row Number: 2
+Element Name: 4 Calculated: False Conditions: q1_4==4 Parent: q1_4 Parent Row Number: 2
+Element Name: 3 Calculated: False Conditions: q1_4==3 Parent: q1_4 Parent Row Number: 2
+Element Name: 2 Calculated: False Conditions: q1_4==2 Parent: q1_4 Parent Row Number: 2
+Element Name: 1 Calculated: False Conditions: q1_4==1 Parent: q1_4 Parent Row Number: 2
+Element Name: 0 Calculated: False Conditions: q1_4==0 Parent: q1_4 Parent Row Number: 2
+Element Name: Mean Calculated: True Conditions:  Parent: Descriptives Parent Row Number: 3
+RowsEnd
+
+End Table
+
+Table: q1_5
+
+Row Totals = True
+Tab Totals = True
+Means = True
+Variance = False
+Standard Deviation = False
+Part-to-part Z-test for proportions = True
+Part-to-part T-test for means = True
+Part-to-whole Z-test for proportions = True
+Part-to-whole T-test for means = True
+ANOVA = False
+G-Test = False
+Linked Groups = False
+Confidence Levels: (0.9),(0.95),(0.99)
+TotalTabCount = 11
+TotalRowCount = 14
+TabGroupCount = 4
+RowGroupCount = 3
+
+TabsBegin: 
+
+GroupName: Row Totals E-tags: (T)
+GroupName: Income E-tags: (A,B,C)
+GroupName: Tenure E-tags: (A,B,C,D)
+GroupName: Co Size E-tags: (A,B,C)
+Element Name: (-) Calculated: True Conditions:  Parent: Row Totals E-tag: T Parent Group Number: 1
+Element Name: Low Calculated: False Conditions: income<=2 Parent: Income E-tag: A Parent Group Number: 2
+Element Name: Middle Calculated: False Conditions: income==3,income==4 Parent: Income E-tag: B Parent Group Number: 2
+Element Name: High Calculated: False Conditions: income>4 Parent: Income E-tag: C Parent Group Number: 2
+Element Name: 1-4 yrs Calculated: False Conditions: tenure==1 Parent: Tenure E-tag: A Parent Group Number: 3
+Element Name: 5-9 yrs Calculated: False Conditions: tenure==2 Parent: Tenure E-tag: B Parent Group Number: 3
+Element Name: 10-19 yrs Calculated: False Conditions: tenure==3 Parent: Tenure E-tag: C Parent Group Number: 3
+Element Name: 20+ yrs Calculated: False Conditions: tenure==4 Parent: Tenure E-tag: D Parent Group Number: 3
+Element Name: Small Calculated: False Conditions: cosize<=2 Parent: Co Size E-tag: A Parent Group Number: 4
+Element Name: Medium Calculated: False Conditions: cosize==3,cosize==4 Parent: Co Size E-tag: B Parent Group Number: 4
+Element Name: Large Calculated: False Conditions: cosize>4 Parent: Co Size E-tag: C Parent Group Number: 4
+TabsEnd
+
+RowsBegin: 
+
+GroupName: Tab Totals Profile: NULL Control Variable: 
+GroupName: q1_5 Profile: (0:0),(1:1),(2:2),(3:3),(4:4),(5:5),(6:6),(7:7),(8:8),(9:9),(10:10) Control Variable: q1_5
+GroupName: Descriptives Profile: NULL Control Variable: 
+Element Name: (-) Calculated: True Conditions:  Parent: Tab Totals Parent Row Number: 1
+Element Name: Top 4 Calculated: True Conditions: 7+8+9+10 Parent: q1_5 Parent Row Number: 2
+Element Name: 10 Calculated: False Conditions: q1_5==10 Parent: q1_5 Parent Row Number: 2
+Element Name: 9 Calculated: False Conditions: q1_5==9 Parent: q1_5 Parent Row Number: 2
+Element Name: 8 Calculated: False Conditions: q1_5==8 Parent: q1_5 Parent Row Number: 2
+Element Name: 7 Calculated: False Conditions: q1_5==7 Parent: q1_5 Parent Row Number: 2
+Element Name: 6 Calculated: False Conditions: q1_5==6 Parent: q1_5 Parent Row Number: 2
+Element Name: 5 Calculated: False Conditions: q1_5==5 Parent: q1_5 Parent Row Number: 2
+Element Name: 4 Calculated: False Conditions: q1_5==4 Parent: q1_5 Parent Row Number: 2
+Element Name: 3 Calculated: False Conditions: q1_5==3 Parent: q1_5 Parent Row Number: 2
+Element Name: 2 Calculated: False Conditions: q1_5==2 Parent: q1_5 Parent Row Number: 2
+Element Name: 1 Calculated: False Conditions: q1_5==1 Parent: q1_5 Parent Row Number: 2
+Element Name: 0 Calculated: False Conditions: q1_5==0 Parent: q1_5 Parent Row Number: 2
+Element Name: Mean Calculated: True Conditions:  Parent: Descriptives Parent Row Number: 3
+RowsEnd
+
+End Table
+
+Table: q1_6
+
+Row Totals = True
+Tab Totals = True
+Means = True
+Variance = False
+Standard Deviation = False
+Part-to-part Z-test for proportions = True
+Part-to-part T-test for means = True
+Part-to-whole Z-test for proportions = True
+Part-to-whole T-test for means = True
+ANOVA = False
+G-Test = False
+Linked Groups = False
+Confidence Levels: (0.9),(0.95),(0.99)
+TotalTabCount = 11
+TotalRowCount = 14
+TabGroupCount = 4
+RowGroupCount = 3
+
+TabsBegin: 
+
+GroupName: Row Totals E-tags: (T)
+GroupName: Income E-tags: (A,B,C)
+GroupName: Tenure E-tags: (A,B,C,D)
+GroupName: Co Size E-tags: (A,B,C)
+Element Name: (-) Calculated: True Conditions:  Parent: Row Totals E-tag: T Parent Group Number: 1
+Element Name: Low Calculated: False Conditions: income<=2 Parent: Income E-tag: A Parent Group Number: 2
+Element Name: Middle Calculated: False Conditions: income==3,income==4 Parent: Income E-tag: B Parent Group Number: 2
+Element Name: High Calculated: False Conditions: income>4 Parent: Income E-tag: C Parent Group Number: 2
+Element Name: 1-4 yrs Calculated: False Conditions: tenure==1 Parent: Tenure E-tag: A Parent Group Number: 3
+Element Name: 5-9 yrs Calculated: False Conditions: tenure==2 Parent: Tenure E-tag: B Parent Group Number: 3
+Element Name: 10-19 yrs Calculated: False Conditions: tenure==3 Parent: Tenure E-tag: C Parent Group Number: 3
+Element Name: 20+ yrs Calculated: False Conditions: tenure==4 Parent: Tenure E-tag: D Parent Group Number: 3
+Element Name: Small Calculated: False Conditions: cosize<=2 Parent: Co Size E-tag: A Parent Group Number: 4
+Element Name: Medium Calculated: False Conditions: cosize==3,cosize==4 Parent: Co Size E-tag: B Parent Group Number: 4
+Element Name: Large Calculated: False Conditions: cosize>4 Parent: Co Size E-tag: C Parent Group Number: 4
+TabsEnd
+
+RowsBegin: 
+
+GroupName: Tab Totals Profile: NULL Control Variable: 
+GroupName: q1_6 Profile: (0:0),(1:1),(2:2),(3:3),(4:4),(5:5),(6:6),(7:7),(8:8),(9:9),(10:10) Control Variable: q1_6
+GroupName: Descriptives Profile: NULL Control Variable: 
+Element Name: (-) Calculated: True Conditions:  Parent: Tab Totals Parent Row Number: 1
+Element Name: Top 4 Calculated: True Conditions: 7+8+9+10 Parent: q1_6 Parent Row Number: 2
+Element Name: 10 Calculated: False Conditions: q1_6==10 Parent: q1_6 Parent Row Number: 2
+Element Name: 9 Calculated: False Conditions: q1_6==9 Parent: q1_6 Parent Row Number: 2
+Element Name: 8 Calculated: False Conditions: q1_6==8 Parent: q1_6 Parent Row Number: 2
+Element Name: 7 Calculated: False Conditions: q1_6==7 Parent: q1_6 Parent Row Number: 2
+Element Name: 6 Calculated: False Conditions: q1_6==6 Parent: q1_6 Parent Row Number: 2
+Element Name: 5 Calculated: False Conditions: q1_6==5 Parent: q1_6 Parent Row Number: 2
+Element Name: 4 Calculated: False Conditions: q1_6==4 Parent: q1_6 Parent Row Number: 2
+Element Name: 3 Calculated: False Conditions: q1_6==3 Parent: q1_6 Parent Row Number: 2
+Element Name: 2 Calculated: False Conditions: q1_6==2 Parent: q1_6 Parent Row Number: 2
+Element Name: 1 Calculated: False Conditions: q1_6==1 Parent: q1_6 Parent Row Number: 2
+Element Name: 0 Calculated: False Conditions: q1_6==0 Parent: q1_6 Parent Row Number: 2
+Element Name: Mean Calculated: True Conditions:  Parent: Descriptives Parent Row Number: 3
+RowsEnd
+
+End Table
+
+Table: q1_7
+
+Row Totals = True
+Tab Totals = True
+Means = True
+Variance = False
+Standard Deviation = False
+Part-to-part Z-test for proportions = True
+Part-to-part T-test for means = True
+Part-to-whole Z-test for proportions = True
+Part-to-whole T-test for means = True
+ANOVA = False
+G-Test = False
+Linked Groups = False
+Confidence Levels: (0.9),(0.95),(0.99)
+TotalTabCount = 11
+TotalRowCount = 14
+TabGroupCount = 4
+RowGroupCount = 3
+
+TabsBegin: 
+
+GroupName: Row Totals E-tags: (T)
+GroupName: Income E-tags: (A,B,C)
+GroupName: Tenure E-tags: (A,B,C,D)
+GroupName: Co Size E-tags: (A,B,C)
+Element Name: (-) Calculated: True Conditions:  Parent: Row Totals E-tag: T Parent Group Number: 1
+Element Name: Low Calculated: False Conditions: income<=2 Parent: Income E-tag: A Parent Group Number: 2
+Element Name: Middle Calculated: False Conditions: income==3,income==4 Parent: Income E-tag: B Parent Group Number: 2
+Element Name: High Calculated: False Conditions: income>4 Parent: Income E-tag: C Parent Group Number: 2
+Element Name: 1-4 yrs Calculated: False Conditions: tenure==1 Parent: Tenure E-tag: A Parent Group Number: 3
+Element Name: 5-9 yrs Calculated: False Conditions: tenure==2 Parent: Tenure E-tag: B Parent Group Number: 3
+Element Name: 10-19 yrs Calculated: False Conditions: tenure==3 Parent: Tenure E-tag: C Parent Group Number: 3
+Element Name: 20+ yrs Calculated: False Conditions: tenure==4 Parent: Tenure E-tag: D Parent Group Number: 3
+Element Name: Small Calculated: False Conditions: cosize<=2 Parent: Co Size E-tag: A Parent Group Number: 4
+Element Name: Medium Calculated: False Conditions: cosize==3,cosize==4 Parent: Co Size E-tag: B Parent Group Number: 4
+Element Name: Large Calculated: False Conditions: cosize>4 Parent: Co Size E-tag: C Parent Group Number: 4
+TabsEnd
+
+RowsBegin: 
+
+GroupName: Tab Totals Profile: NULL Control Variable: 
+GroupName: q1_7 Profile: (0:0),(1:1),(2:2),(3:3),(4:4),(5:5),(6:6),(7:7),(8:8),(9:9),(10:10) Control Variable: q1_7
+GroupName: Descriptives Profile: NULL Control Variable: 
+Element Name: (-) Calculated: True Conditions:  Parent: Tab Totals Parent Row Number: 1
+Element Name: Top 4 Calculated: True Conditions: 7+8+9+10 Parent: q1_7 Parent Row Number: 2
+Element Name: 10 Calculated: False Conditions: q1_7==10 Parent: q1_7 Parent Row Number: 2
+Element Name: 9 Calculated: False Conditions: q1_7==9 Parent: q1_7 Parent Row Number: 2
+Element Name: 8 Calculated: False Conditions: q1_7==8 Parent: q1_7 Parent Row Number: 2
+Element Name: 7 Calculated: False Conditions: q1_7==7 Parent: q1_7 Parent Row Number: 2
+Element Name: 6 Calculated: False Conditions: q1_7==6 Parent: q1_7 Parent Row Number: 2
+Element Name: 5 Calculated: False Conditions: q1_7==5 Parent: q1_7 Parent Row Number: 2
+Element Name: 4 Calculated: False Conditions: q1_7==4 Parent: q1_7 Parent Row Number: 2
+Element Name: 3 Calculated: False Conditions: q1_7==3 Parent: q1_7 Parent Row Number: 2
+Element Name: 2 Calculated: False Conditions: q1_7==2 Parent: q1_7 Parent Row Number: 2
+Element Name: 1 Calculated: False Conditions: q1_7==1 Parent: q1_7 Parent Row Number: 2
+Element Name: 0 Calculated: False Conditions: q1_7==0 Parent: q1_7 Parent Row Number: 2
+Element Name: Mean Calculated: True Conditions:  Parent: Descriptives Parent Row Number: 3
+RowsEnd
+
+End Table
+
+Table: q1_8
+
+Row Totals = True
+Tab Totals = True
+Means = True
+Variance = False
+Standard Deviation = False
+Part-to-part Z-test for proportions = True
+Part-to-part T-test for means = True
+Part-to-whole Z-test for proportions = True
+Part-to-whole T-test for means = True
+ANOVA = False
+G-Test = False
+Linked Groups = False
+Confidence Levels: (0.9),(0.95),(0.99)
+TotalTabCount = 11
+TotalRowCount = 14
+TabGroupCount = 4
+RowGroupCount = 3
+
+TabsBegin: 
+
+GroupName: Row Totals E-tags: (T)
+GroupName: Income E-tags: (A,B,C)
+GroupName: Tenure E-tags: (A,B,C,D)
+GroupName: Co Size E-tags: (A,B,C)
+Element Name: (-) Calculated: True Conditions:  Parent: Row Totals E-tag: T Parent Group Number: 1
+Element Name: Low Calculated: False Conditions: income<=2 Parent: Income E-tag: A Parent Group Number: 2
+Element Name: Middle Calculated: False Conditions: income==3,income==4 Parent: Income E-tag: B Parent Group Number: 2
+Element Name: High Calculated: False Conditions: income>4 Parent: Income E-tag: C Parent Group Number: 2
+Element Name: 1-4 yrs Calculated: False Conditions: tenure==1 Parent: Tenure E-tag: A Parent Group Number: 3
+Element Name: 5-9 yrs Calculated: False Conditions: tenure==2 Parent: Tenure E-tag: B Parent Group Number: 3
+Element Name: 10-19 yrs Calculated: False Conditions: tenure==3 Parent: Tenure E-tag: C Parent Group Number: 3
+Element Name: 20+ yrs Calculated: False Conditions: tenure==4 Parent: Tenure E-tag: D Parent Group Number: 3
+Element Name: Small Calculated: False Conditions: cosize<=2 Parent: Co Size E-tag: A Parent Group Number: 4
+Element Name: Medium Calculated: False Conditions: cosize==3,cosize==4 Parent: Co Size E-tag: B Parent Group Number: 4
+Element Name: Large Calculated: False Conditions: cosize>4 Parent: Co Size E-tag: C Parent Group Number: 4
+TabsEnd
+
+RowsBegin: 
+
+GroupName: Tab Totals Profile: NULL Control Variable: 
+GroupName: q1_8 Profile: (0:0),(1:1),(2:2),(3:3),(4:4),(5:5),(6:6),(7:7),(8:8),(9:9),(10:10) Control Variable: q1_8
+GroupName: Descriptives Profile: NULL Control Variable: 
+Element Name: (-) Calculated: True Conditions:  Parent: Tab Totals Parent Row Number: 1
+Element Name: Top 4 Calculated: True Conditions: 7+8+9+10 Parent: q1_8 Parent Row Number: 2
+Element Name: 10 Calculated: False Conditions: q1_8==10 Parent: q1_8 Parent Row Number: 2
+Element Name: 9 Calculated: False Conditions: q1_8==9 Parent: q1_8 Parent Row Number: 2
+Element Name: 8 Calculated: False Conditions: q1_8==8 Parent: q1_8 Parent Row Number: 2
+Element Name: 7 Calculated: False Conditions: q1_8==7 Parent: q1_8 Parent Row Number: 2
+Element Name: 6 Calculated: False Conditions: q1_8==6 Parent: q1_8 Parent Row Number: 2
+Element Name: 5 Calculated: False Conditions: q1_8==5 Parent: q1_8 Parent Row Number: 2
+Element Name: 4 Calculated: False Conditions: q1_8==4 Parent: q1_8 Parent Row Number: 2
+Element Name: 3 Calculated: False Conditions: q1_8==3 Parent: q1_8 Parent Row Number: 2
+Element Name: 2 Calculated: False Conditions: q1_8==2 Parent: q1_8 Parent Row Number: 2
+Element Name: 1 Calculated: False Conditions: q1_8==1 Parent: q1_8 Parent Row Number: 2
+Element Name: 0 Calculated: False Conditions: q1_8==0 Parent: q1_8 Parent Row Number: 2
+Element Name: Mean Calculated: True Conditions:  Parent: Descriptives Parent Row Number: 3
+RowsEnd
+
+End Table
+
+Table: q1_9
+
+Row Totals = True
+Tab Totals = True
+Means = True
+Variance = False
+Standard Deviation = False
+Part-to-part Z-test for proportions = True
+Part-to-part T-test for means = True
+Part-to-whole Z-test for proportions = True
+Part-to-whole T-test for means = True
+ANOVA = False
+G-Test = False
+Linked Groups = False
+Confidence Levels: (0.9),(0.95),(0.99)
+TotalTabCount = 11
+TotalRowCount = 14
+TabGroupCount = 4
+RowGroupCount = 3
+
+TabsBegin: 
+
+GroupName: Row Totals E-tags: (T)
+GroupName: Income E-tags: (A,B,C)
+GroupName: Tenure E-tags: (A,B,C,D)
+GroupName: Co Size E-tags: (A,B,C)
+Element Name: (-) Calculated: True Conditions:  Parent: Row Totals E-tag: T Parent Group Number: 1
+Element Name: Low Calculated: False Conditions: income<=2 Parent: Income E-tag: A Parent Group Number: 2
+Element Name: Middle Calculated: False Conditions: income==3,income==4 Parent: Income E-tag: B Parent Group Number: 2
+Element Name: High Calculated: False Conditions: income>4 Parent: Income E-tag: C Parent Group Number: 2
+Element Name: 1-4 yrs Calculated: False Conditions: tenure==1 Parent: Tenure E-tag: A Parent Group Number: 3
+Element Name: 5-9 yrs Calculated: False Conditions: tenure==2 Parent: Tenure E-tag: B Parent Group Number: 3
+Element Name: 10-19 yrs Calculated: False Conditions: tenure==3 Parent: Tenure E-tag: C Parent Group Number: 3
+Element Name: 20+ yrs Calculated: False Conditions: tenure==4 Parent: Tenure E-tag: D Parent Group Number: 3
+Element Name: Small Calculated: False Conditions: cosize<=2 Parent: Co Size E-tag: A Parent Group Number: 4
+Element Name: Medium Calculated: False Conditions: cosize==3,cosize==4 Parent: Co Size E-tag: B Parent Group Number: 4
+Element Name: Large Calculated: False Conditions: cosize>4 Parent: Co Size E-tag: C Parent Group Number: 4
+TabsEnd
+
+RowsBegin: 
+
+GroupName: Tab Totals Profile: NULL Control Variable: 
+GroupName: q1_9 Profile: (0:0),(1:1),(2:2),(3:3),(4:4),(5:5),(6:6),(7:7),(8:8),(9:9),(10:10) Control Variable: q1_9
+GroupName: Descriptives Profile: NULL Control Variable: 
+Element Name: (-) Calculated: True Conditions:  Parent: Tab Totals Parent Row Number: 1
+Element Name: Top 4 Calculated: True Conditions: 7+8+9+10 Parent: q1_9 Parent Row Number: 2
+Element Name: 10 Calculated: False Conditions: q1_9==10 Parent: q1_9 Parent Row Number: 2
+Element Name: 9 Calculated: False Conditions: q1_9==9 Parent: q1_9 Parent Row Number: 2
+Element Name: 8 Calculated: False Conditions: q1_9==8 Parent: q1_9 Parent Row Number: 2
+Element Name: 7 Calculated: False Conditions: q1_9==7 Parent: q1_9 Parent Row Number: 2
+Element Name: 6 Calculated: False Conditions: q1_9==6 Parent: q1_9 Parent Row Number: 2
+Element Name: 5 Calculated: False Conditions: q1_9==5 Parent: q1_9 Parent Row Number: 2
+Element Name: 4 Calculated: False Conditions: q1_9==4 Parent: q1_9 Parent Row Number: 2
+Element Name: 3 Calculated: False Conditions: q1_9==3 Parent: q1_9 Parent Row Number: 2
+Element Name: 2 Calculated: False Conditions: q1_9==2 Parent: q1_9 Parent Row Number: 2
+Element Name: 1 Calculated: False Conditions: q1_9==1 Parent: q1_9 Parent Row Number: 2
+Element Name: 0 Calculated: False Conditions: q1_9==0 Parent: q1_9 Parent Row Number: 2
+Element Name: Mean Calculated: True Conditions:  Parent: Descriptives Parent Row Number: 3
+RowsEnd
+
+End Table
+
+Table: q11
+
+Row Totals = True
+Tab Totals = True
+Means = True
+Variance = False
+Standard Deviation = False
+Part-to-part Z-test for proportions = True
+Part-to-part T-test for means = True
+Part-to-whole Z-test for proportions = True
+Part-to-whole T-test for means = True
+ANOVA = False
+G-Test = False
+Linked Groups = True
+Confidence Levels: (0.9),(0.95),(0.99)
+TotalTabCount = 11
+TotalRowCount = 10
+TabGroupCount = 4
+RowGroupCount = 10
+
+TabsBegin: 
+
+GroupName: Row Totals E-tags: (T)
+GroupName: Income E-tags: (A,B,C)
+GroupName: Tenure E-tags: (A,B,C,D)
+GroupName: Co Size E-tags: (A,B,C)
+Element Name: (-) Calculated: True Conditions:  Parent: Row Totals E-tag: T Parent Group Number: 1
+Element Name: Low Calculated: False Conditions: income<=2 Parent: Income E-tag: A Parent Group Number: 2
+Element Name: Middle Calculated: False Conditions: income==3,income==4 Parent: Income E-tag: B Parent Group Number: 2
+Element Name: High Calculated: False Conditions: income>4 Parent: Income E-tag: C Parent Group Number: 2
+Element Name: 1-4 yrs Calculated: False Conditions: tenure==1 Parent: Tenure E-tag: A Parent Group Number: 3
+Element Name: 5-9 yrs Calculated: False Conditions: tenure==2 Parent: Tenure E-tag: B Parent Group Number: 3
+Element Name: 10-19 yrs Calculated: False Conditions: tenure==3 Parent: Tenure E-tag: C Parent Group Number: 3
+Element Name: 20+ yrs Calculated: False Conditions: tenure==4 Parent: Tenure E-tag: D Parent Group Number: 3
+Element Name: Small Calculated: False Conditions: cosize<=2 Parent: Co Size E-tag: A Parent Group Number: 4
+Element Name: Medium Calculated: False Conditions: cosize==3,cosize==4 Parent: Co Size E-tag: B Parent Group Number: 4
+Element Name: Large Calculated: False Conditions: cosize>4 Parent: Co Size E-tag: C Parent Group Number: 4
+TabsEnd
+
+RowsBegin: 
+
+GroupName: Tab Totals Profile: NULL Control Variable: 
+GroupName: q11_0 Profile: (1:1),(2:2),(3:3),(4:4),(5:5) Control Variable: q11_0
+GroupName: q11_1 Profile: (1:1),(2:2),(3:3),(4:4),(5:5) Control Variable: q11_1
+GroupName: q11_2 Profile: (1:1),(2:2),(3:3),(4:4),(5:5) Control Variable: q11_2
+GroupName: q11_3 Profile: (1:1),(2:2),(3:3),(4:4),(5:5) Control Variable: q11_3
+GroupName: q11_4 Profile: (1:1),(2:2),(3:3),(4:4),(5:5) Control Variable: q11_4
+GroupName: q11_5 Profile: (1:1),(2:2),(3:3),(4:4),(5:5) Control Variable: q11_5
+GroupName: q11_6 Profile: (1:1),(2:2),(3:3),(4:4),(5:5) Control Variable: q11_6
+GroupName: q11_7 Profile: (1:1),(2:2),(3:3),(4:4),(5:5) Control Variable: q11_7
+GroupName: Descriptives Profile: NULL Control Variable: 
+Element Name: (-) Calculated: True Conditions:  Parent: Tab Totals Parent Row Number: 1
+Element Name: Top 2 Calculated: False Conditions: q11_0<=2 Parent: q11_0 Parent Row Number: 2
+Element Name: Top 2 Calculated: False Conditions: q11_1<=2 Parent: q11_1 Parent Row Number: 3
+Element Name: Top 2 Calculated: False Conditions: q11_2<=2 Parent: q11_2 Parent Row Number: 4
+Element Name: Top 2 Calculated: False Conditions: q11_3<=2 Parent: q11_3 Parent Row Number: 5
+Element Name: Top 2 Calculated: False Conditions: q11_4<=2 Parent: q11_4 Parent Row Number: 6
+Element Name: Top 2 Calculated: False Conditions: q11_5<=2 Parent: q11_5 Parent Row Number: 7
+Element Name: Top 2 Calculated: False Conditions: q11_6<=2 Parent: q11_6 Parent Row Number: 8
+Element Name: Top 2 Calculated: False Conditions: q11_7<=2 Parent: q11_7 Parent Row Number: 9
+Element Name: Mean Calculated: True Conditions:  Parent: Descriptives Parent Row Number: 10
+RowsEnd
+
+End Table
+
